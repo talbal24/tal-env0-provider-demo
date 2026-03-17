@@ -31,7 +31,17 @@ resource "env0_environment" "vcs_environment" {
     terraform_version    = "1.5.0"
     vcs_connection_id = "c0956ba9-012c-490e-a2bd-d97d97489a74"
   }
+  resource "env0_environment" "vcs_environment" {
+  name       = "my-other-env"
+  project_id = var.project_id
+  workspace  = "my-vcs-workspace"
   
+  without_template_settings {
+    repository           = "https://github.com/talbal24/tal-gh-demo"
+    type                 = "terraform"
+    terraform_version    = "1.5.0"
+    vcs_connection_id = "c0956ba9-012c-490e-a2bd-d97d97489a74"
+  }
   # Optional VCS settings
   deploy_on_push                   = true
   run_plan_on_pull_requests        = true
