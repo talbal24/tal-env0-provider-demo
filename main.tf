@@ -21,7 +21,7 @@ variable "project_id" {
 
 # Environment: Created from VCS (without template)
 resource "env0_environment" "vcs_environment" {
-  name       = "my-vcs-environment"
+  name       = "my-new-env"
   project_id = var.project_id
   workspace  = "my-vcs-workspace"
   
