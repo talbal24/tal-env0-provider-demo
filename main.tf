@@ -26,9 +26,10 @@ resource "env0_environment" "vcs_environment" {
   workspace  = "my-vcs-workspace"
   
   without_template_settings {
-    repository        = "https://github.com/talbal24/tal-gh-demo"
-    type              = "terraform"
-    terraform_version = "1.5.0"
+    repository           = "https://github.com/talbal24/tal-gh-demo"
+    type                 = "terraform"
+    terraform_version    = "1.5.0"
+    github_installation_id = 96850005
   }
   
   # Optional VCS settings
