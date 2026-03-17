@@ -29,7 +29,7 @@ resource "env0_environment" "vcs_environment" {
     repository           = "https://github.com/talbal24/tal-gh-demo"
     type                 = "terraform"
     terraform_version    = "1.5.0"
-    github_installation_id = "c0956ba9-012c-490e-a2bd-d97d97489a74"
+    vcsConnectionId = "c0956ba9-012c-490e-a2bd-d97d97489a74"
   }
   
   # Optional VCS settings
