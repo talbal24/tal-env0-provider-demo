@@ -37,7 +37,7 @@ resource "env0_environment" "vcs_environment" {
 }
 
 resource "env0_environment" "other_vcs_environment" {
-  name       = "my-other-env"
+  name       = "my-other-env-new"
   project_id = var.project_id
   workspace  = "my-other-vcs-workspace"
 
