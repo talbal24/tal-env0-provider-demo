@@ -76,6 +76,24 @@ resource "env0_environment" "my_null_resource" {
   auto_deploy_on_path_changes_only = true
 }
 
+# Environment 4: Created from VCS
+resource "env0_environment" "my_null_resource" {
+  name       = "my new env"
+  project_id = var.project_id
+  workspace  = "env-for-demo"
+
+  without_template_settings {
+    repository         = "https://github.com/talbal24/tal-gh-demo"
+    type               = "terraform"
+    terraform_version  = "1.5.0"
+    vcs_connection_id  = "c0956ba9-012c-490e-a2bd-d97d97489a74"
+  }
+
+  deploy_on_push                   = true
+  run_plan_on_pull_requests        = true
+  auto_deploy_on_path_changes_only = true
+}
+
 output "other_vcs_environment_id" {
   value       = env0_environment.other_vcs_environment.id
   description = "ID of the second VCS-based environment"
